@@ -5,8 +5,14 @@ const getPosts = async () => {
   return response.data;
 };
 
+const getOne = async (credentials) => {
+  const response = await instance.get(`/post/${credentials}`);
+  return response.data;
+};
+
 const postsService = {
   getPosts,
+  getOne,
 };
 
 export default postsService;
