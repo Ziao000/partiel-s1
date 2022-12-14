@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CreateComment from "../Component/CreateComment";
+import Reservation from "../Component/Reservation";
 import postsService from "../setup/services/post.service";
 
 const Card = () => {
@@ -26,6 +27,8 @@ const Card = () => {
  
     return (  
         <>
+        
+        <button onClick={() => window.history.back()}>Retour</button>
             <h2>Produit :</h2>
               <p>{post.title}</p>
                 <p>{post.size}</p>
@@ -43,6 +46,7 @@ const Card = () => {
                 </div>
 
                 <CreateComment id={_id} fetchPost={fetchPost}/>
+                <Reservation id={_id} fetchPost={fetchPost}/>
                 
         </>
 

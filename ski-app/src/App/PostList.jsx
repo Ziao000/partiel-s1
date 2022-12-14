@@ -23,11 +23,21 @@ const PostList = () => {
     console.log(_id);
     naviguate(`/card/${_id}`);
   };
+// filter post 
+  const handleFilter = (e) => {
+    console.log(e.target.value);
+    const filteredPosts = posts.filter((post) => post.size === e.target.value);
+    setPosts(filteredPosts);
+  };
 
   
 
   return (
     <>
+
+  
+
+
       <h1>Reservation Ski</h1>
     <div className="card-ski" >
 
