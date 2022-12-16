@@ -40,12 +40,12 @@ const Card = () => {
                
                 
                 <img class="img-ski" src={post.image}/>
-
-                
-                </div>
+     
                 <div className="description">
                 <p>{post.description}</p>
                 </div>
+                </div>
+                
             
                 <h2>Commentaires :</h2>
                 <div class="comment">

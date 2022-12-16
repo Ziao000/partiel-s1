@@ -2,6 +2,7 @@ import postsService from "../setup/services/post.service";
 import { useEffect, useState } from "react";
 import "../PostList.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import Search from "../Component/Search";
 
 
 const PostList = () => {
@@ -23,21 +24,16 @@ const PostList = () => {
     console.log(_id);
     naviguate(`/card/${_id}`);
   };
-// filter post 
-  const handleFilter = (e) => {
-    console.log(e.target.value);
-    const filteredPosts = posts.filter((post) => post.size === e.target.value);
-    setPosts(filteredPosts);
-  };
+  
+
 
   
 
   return (
     <>
 
-  
-
-
+    
+    <Search posts={posts} setPosts={setPosts}/>
       <h1>Reservation Ski</h1>
     <div className="card-ski" >
 
