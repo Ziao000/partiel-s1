@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import CreateComment from "../Component/CreateComment";
 import Reservation from "../Component/Reservation";
 import postsService from "../setup/services/post.service";
+import "../CardDetails.css";
+
 
 const Card = () => {
 
@@ -28,19 +30,31 @@ const Card = () => {
     return (  
         <>
         
-        <button onClick={() => window.history.back()}>Retour</button>
+        <button class="return-btn" onClick={() => window.history.back()}>Retour</button>
+            <div class="card-ski">
             <h2>Produit :</h2>
               <p>{post.title}</p>
-                <p>{post.size}</p>
-                <p>{post.price}</p>
-                <img src={post.image}/>
+                <p>{post.size} cm</p>
+                <p>{post.weight} KG</p>
+                <p>{post.price} €</p>
+               
+                
+                <img class="img-ski" src={post.image}/>
 
-                <div>
-                    <h2>Commentaires :</h2>
+                
+                </div>
+                <div className="description">
+                <p>{post.description}</p>
+                </div>
+            
+                <h2>Commentaires :</h2>
+                <div class="comment">
+                   
                     {post.comments && post.comments.map((comment) => (
                         <div key={comment._id}>
-                            <h3>{comment.username} :</h3>
+                            <h3>De {comment.username} :</h3>
                             <p>{comment.description}</p>
+                            <p>{comment.stars} Étoiles</p>
                             </div>
                     ))}
                 </div>

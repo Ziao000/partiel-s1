@@ -45,9 +45,9 @@ const PostList = () => {
            
           <ul key={post._id} className="card-space" onClick={(e) => handleClick(e, post._id)}>
             <h2>{post.title}</h2>
-            <p>{post.size}</p>
-            <p>{post.price}</p>
-            <img src={post.image}/>
+            <p>{post.size} cm</p>
+            <p>{post.price} €</p>
+            <img class="img-ski" src={post.image}/>
           </ul>
 
         ))}

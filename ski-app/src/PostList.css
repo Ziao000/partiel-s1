@@ -1,5 +1,5 @@
 .card-space{
-    width: 100%;
+    width: 80%;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -21,9 +21,11 @@
     box-shadow: 0 8px 26px rgba(0, 0, 0, 0.26);
 }
 
-.card-ski{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 
+
+.img-ski{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 5px;
 }

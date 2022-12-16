@@ -2,6 +2,8 @@ import { useState } from "react";
 import bookingService from "../setup/services/booking.service";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "../Reservation.css";
+
 
 
 const Reservation = ({id, fetchPost}) => {
@@ -29,12 +31,11 @@ const Reservation = ({id, fetchPost}) => {
         <>
         <h1>Réservation des ski :</h1>
 
-            <form>
+            <form className="form-reservation">
                 <label htmlFor="elephoneNumber">Numéro de téléphone :</label>
                 <input type="text" name="telephoneNumber" id="telephoneNumber" onChange={handleChange}/>
                 <button type="button" onClick={handleCreate}>Réserver</button>
             </form>
-            
                 
         </>
      );

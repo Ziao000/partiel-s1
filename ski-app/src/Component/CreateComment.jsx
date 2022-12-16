@@ -1,5 +1,7 @@
 import { useState } from "react";
 import commentService from "../setup/services/comment.service";
+import "../CreateComment.css";
+
 
 const CreateComment = ({id, fetchPost}) => {
 
@@ -31,7 +33,7 @@ const CreateComment = ({id, fetchPost}) => {
     return ( 
         <>
             <h1>Publier un Commentaire :</h1>
-            <form>
+            <form class="form-comment">
                 <label htmlFor="username">Nom :</label>
                 <input type="text" name="username" id="username" onChange={handleChange}/>
                 <label htmlFor="description">Commentaire :</label>
